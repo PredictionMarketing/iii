@@ -152,11 +152,11 @@ h4 { font-size: 1rem; font-weight: 700; color: var(--ink); }
     max-width: var(--container);
     margin: 0 auto;
     padding: 0 2rem;
-    height: 72px;
+    height: 88px;
 }
 
 .nav-logo img {
-    height: 36px;
+    height: 48px;
     width: auto;
 }
 
@@ -164,32 +164,38 @@ h4 { font-size: 1rem; font-weight: 700; color: var(--ink); }
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 0;
+    gap: 0.25rem;
 }
 
 .nav-links li a {
     padding: 0.5rem 1rem;
-    font-size: 0.88rem;
+    font-size: 0.95rem;
     font-weight: 500;
     color: var(--slate);
-    transition: color 0.2s;
+    transition: color 0.2s, border-color 0.2s;
     text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 0.35rem;
 }
 
-.nav-links li a:hover { color: var(--ink); }
+.nav-links li a:hover {
+    color: var(--ink);
+    border-bottom-color: var(--accent);
+}
 
 .nav-cta {
     background: var(--accent) !important;
     color: var(--white) !important;
-    padding: 0.55rem 1.3rem !important;
+    padding: 0.6rem 1.5rem !important;
     border-radius: var(--radius-sm);
     font-weight: 600 !important;
-    font-size: 0.85rem !important;
+    font-size: 0.9rem !important;
     transition: background 0.2s !important;
-    margin-left: 0.5rem;
+    margin-left: 0.75rem;
+    border-bottom: none !important;
 }
 
-.nav-cta:hover { background: var(--accent-hover) !important; }
+.nav-cta:hover { background: var(--accent-hover) !important; border-bottom: none !important; }
 
 .nav-toggle {
     display: none;
@@ -756,7 +762,7 @@ h4 { font-size: 1rem; font-weight: 700; color: var(--ink); }
     .nav-links {
         display: none;
         position: absolute;
-        top: 72px;
+        top: 88px;
         left: 0;
         right: 0;
         background: var(--white);
